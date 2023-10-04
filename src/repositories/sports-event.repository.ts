@@ -10,7 +10,6 @@ class SportsEventRepository implements ISportsEventRepository {
         try {
             return await SportsEvent.findAll();
         } catch (error) {
-            console.log(error);
             throw new Error('Failed to retrieve SportsEvents!');
         }
     }

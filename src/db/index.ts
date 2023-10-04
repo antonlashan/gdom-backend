@@ -2,6 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 
 import { config } from '../config/db.config';
 import SportsEvent from '../models/sports-event.model';
+import User from '../models/user.model';
 
 class Database {
     public sequelize: Sequelize | undefined;
@@ -24,7 +25,7 @@ class Database {
                 acquire: config.pool.acquire,
                 idle: config.pool.idle,
             },
-            models: [SportsEvent],
+            models: [User, SportsEvent],
         });
 
         await this.sequelize

@@ -12,13 +12,13 @@ export default class SportsEvent extends Model {
         autoIncrement: true,
         field: 'event_id',
     })
-    eventId?: number;
+    eventId!: number;
 
     @Column({
         type: DataType.STRING(100),
         field: 'event_name',
     })
-    eventName?: string;
+    eventName!: string;
 
     @Column({
         type: DataType.DECIMAL(10, 2),

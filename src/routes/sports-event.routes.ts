@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import SportEventController from '../controllers/sports-event.controller';
+import { verifyToken } from '../middlewares/authJwt.middleware';
 
 class SportEventRoutes {
     router = Router();
@@ -10,9 +11,9 @@ class SportEventRoutes {
     }
 
     intializeRoutes() {
-        this.router.get('/', this.controller.findAll);
+        this.router.get('/', [verifyToken], this.controller.findAll);
 
-        this.router.get('/:id', this.controller.findOne);
+        this.router.get('/:id', [verifyToken], this.controller.findOne);
     }
 }
 
