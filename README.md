@@ -29,7 +29,8 @@ Give right permissions to the database.
    and change db configuration
 
 4. DB migrations
-   Create tables
+
+Create tables
 
 ```
 npm run migrate
@@ -47,4 +48,5 @@ npm run seed
 npm run start
 ```
 
-6. Check server wheather working by open this url http://localhost:8080/api
+6. Check server is working by opening this URL
+   http://localhost:8080/api
