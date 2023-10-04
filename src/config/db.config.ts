@@ -7,7 +7,7 @@ export const config = {
     PORT: process.env.DB_PORT,
     USER: process.env.DB_USER,
     PASSWORD: process.env.DB_PASSWORD,
-    DB: process.env.DB,
+    DB: process.env.DB_NAME,
     DIALECT: process.env.DB_DIALECT as Dialect,
     pool: {
         max: 5,
